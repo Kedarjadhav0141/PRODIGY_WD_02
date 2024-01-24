@@ -1,0 +1,99 @@
+body {
+  font-family: cursive;
+  background-color: black;
+  background-image: url("clock.webp");
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color:black;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color:rebeccapurple;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.timer span {
+  margin: 0 0.5rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#lap-list {
+  max-height: 100px;
+  overflow-y: auto;
+}
+#lap-list {
+  max-height: 100px;
+  overflow-y: auto;
+  counter-reset: lap-counter;
+}
+
+#lap-list li {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+#lap-list li:hover {
+  background-color: #f2f2f2;
+}
+
+#lap-list li::before {
+  counter-increment: lap-counter;
+  content: counter(lap-counter);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+#lap-list li.highlight {
+  background-color: #ffffcc;
+}
